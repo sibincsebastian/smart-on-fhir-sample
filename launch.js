@@ -3,7 +3,7 @@ function getFhirData() {
     console.log(clientId);
     FHIR.oauth2.authorize({
       'client_id': clientId,
-      'scope': 'user/Patient.read user/Obervation.read launch openid profile offline_access fhirUser',
+      'scope':  'user/Patient.read user/Practitioner.read launch openid profile offline_access fhirUser',
       'redirect_uri': 'https://sibincsebastian.github.io/smart-on-fhir-sample/app.html'
     });
   }
