@@ -27,7 +27,8 @@ async function patientRequests() {
   var patientResponse = await patientDetails.json()
   var formattedPatientResponse = formatedJson(patientResponse);
   document.getElementById('patientJson').innerHTML = formattedPatientResponse;
-  console.log("Patient Data :" + patientResponse)
+  
+  console.log("Patient Data :" + formattedPatientResponse)
   
   var firstName = patientResponse.name ? (patientResponse.name[0].given || 'Nil') : 'Nil';
   var lastName = patientResponse.name ? (patientResponse.name[0].family || 'Nil') : 'Nil';
